@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Asserions\_Assert.cs" />
+    <Compile Include="Collections\ext_Stack.cs" />
     <Compile Include="Collections\ListFrom.cs" />
     <Compile Include="Collections\Empty.cs" />
     <Compile Include="Collections\StackList {T}.cs" />
@@ -116,8 +117,8 @@
     <Compile Include="ext_IEnumerableOfKeyValuePair.cs" />
     <Compile Include="ext_INotifyPropertyChanged.cs" />
     <Compile Include="ext_IQueryable.cs" />
-    <Compile Include="ext_IReadOnlyDictionary.cs" />
-    <Compile Include="ext_IReadOnlyList.cs" />
+    <Compile Include="Collections\ext_IReadOnlyDictionary.cs" />
+    <Compile Include="Collections\ext_IReadOnlyList.cs" />
     <Compile Include="FSharp\and\And {T1, T2}.cs" />
     <Compile Include="FSharp\and\IAnd {TA, TB}.cs" />
     <Compile Include="FSharp\xor-interfaces\ext_XorClasses.cs" />

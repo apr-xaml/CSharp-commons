@@ -19,20 +19,20 @@ namespace nIt.nCommon
     {
         static public IStackList<T> Append<T>(this IStackList<T> _this, T element)
         {
-            return new StackList<T>(_this.FromBottomToTop().Add(element));
+            return new MutableStackList<T>(_this.FromBottomToTop().Add(element));
         }
     }
 
-    public class StackList<T> : IStackList<T>
+    public class MutableStackList<T> : IStackList<T>
     {
         Stack<T> _stack;
 
-        public StackList()
+        public MutableStackList()
         {
             _stack = new Stack<T>();
         }
 
-        public StackList(IEnumerable<T> other)
+        public MutableStackList(IEnumerable<T> other)
         {
             _stack = new Stack<T>(other);
         }
@@ -45,5 +45,8 @@ namespace nIt.nCommon
 
         public IEnumerable<T> FromTopToBottom()
             => _stack;
+
+
+       
     }
 }

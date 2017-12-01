@@ -31,11 +31,7 @@ namespace nIt.nCommon
         }
 
 
-        [Obsolete]
-        public static bool IsPropertyNegated<TOwner>(Expression<Func<TOwner, bool?>> exProp)
-        {
-            return Property.IsNegated(exProp);
-        }
+
 
         public static IEnumerable<PropertyInfoWithPrefix> GetAllPublicImplicitInstancePropsRecursive<TOwner, TTypeToExpand>(TOwner owner)
             where TOwner : class

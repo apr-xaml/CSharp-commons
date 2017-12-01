@@ -8,7 +8,13 @@ namespace nIt.nCommon
 
         static public IStackList<TElement> ReversedList<TElement>()
         {
-            return new StackList<TElement>();
+            return new MutableStackList<TElement>();
+        }
+
+
+        static public List<TElement> MutableList<TElement>()
+        {
+            return new List<TElement>();
         }
 
         static  public IReadOnlyList<TElement> List<TElement>()
@@ -21,7 +27,7 @@ namespace nIt.nCommon
             return new Dictionary<TKey, TValue>();
         }
 
-        static public Stack<TElement> Stack<TElement>()
+        static public Stack<TElement> MutableStack<TElement>()
         {
             return new Stack<TElement>();
         }
