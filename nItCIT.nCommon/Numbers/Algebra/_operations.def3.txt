@@ -1,0 +1,70 @@
+﻿
+
+@aliases
+{
+	Any := (N|Z|P)
+	NIDError : = NoIntegerDivisionError
+	AOError := ArithmeticOverFlowError
+}
+
+
+@comment(Summing)
+@binaryOperator(+, isCommutitive=true)
+{
+	(P + P) => (AOError|P)
+	(P + N) => (AOError|Any)
+	(N + N) => (AOError|N)
+
+
+	@forEvery(token T in Any)
+	{
+		(T + Z) => T
+	}
+}
+
+
+@comment(Substracting)
+@binaryOperator(-)
+{
+	(P - P) => (AOError|Any)
+	(P - N) => P
+	(N - N) => Any
+	(P - Z) => P
+	(Z - P) => N
+	(Z - N) => P
+	(Z - Z) => Z
+	(P - Z) => P
+}
+
+
+@comment(Multiplying)
+@binaryOperator(*, isCommutitive=true)
+{
+	(P * P) => (AOError|P)
+	(P * N) => (AOError|N)
+	(N * N) => (AOError|P)
+
+	@forEvery(token T in Any)
+	{
+		(T * Z) => Z
+	}
+}
+
+
+@comment(Dividing)
+@binaryOperator(/)
+{
+	(P / P) => (NIDError|P)
+	(P / N) => (NIDError|N)
+	(N / N) => (NIDError|P)
+	(Z / P) => (NIDError|Z)
+	(Z / N) => (NIDError|Z)
+
+
+	@forEvery(token T in Any)
+	{
+		(T / Z) => NEVER
+		(Z / T) => Z
+	}
+
+}

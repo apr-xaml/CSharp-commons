@@ -1,0 +1,60 @@
+﻿@comments
+(
+	Positive
+	Negative
+	Zero
+)
+
+
+@comment(Summing)
+@binaryOperator(+)
+@commutative
+{
+	(P + P) => P
+	(P + N) => (N|Z|P)
+	(N + N) => N
+	(P + Z) => P
+	(N + Z) => N
+	(Z + Z) => Z
+}
+
+
+@comment(Substracting)
+@binaryOperator(-)
+{
+	(P - P) => (N|Z|P)
+	(P - N) => P
+	(N - N) => (N|Z|P)
+	(P - Z) => P
+	(Z - P) => N
+	(Z - N) => P
+	(Z - Z) => Z
+	(P - Z) => P
+}
+
+
+@comment(Multiplying)
+@binaryOperator(*)
+@commutative
+{
+	(P * P) => P
+	(P * N) => N
+	(N * N) => P
+	(P * Z) => Z
+	(N * Z) => Z
+	(Z * Z) => Z
+}
+
+
+@comment(Dividing)
+@binaryOperator(/)
+{
+	(P / P) => P
+	(P / N) => N
+	(N / N) => P
+	(Z / P) => Z
+	(Z / N) => Z
+	(P / Z) => NEVER
+	(N / Z) => NEVER
+	(Z / Z) => NEVER
+}

@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3CC11DA-F948-4E77-A156-45304C538E5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nItCIT.nCommon</RootNamespace>
+    <AssemblyName>nItCIT.nCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>True</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsRedundantTests>True</CodeContractsRedundantTests>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>False</CodeContractsSuggestRequires>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsSuggestReadonly>True</CodeContractsSuggestReadonly>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsBeingOptimisticOnExternal>True</CodeContractsBeingOptimisticOnExternal>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BuildWCF|AnyCPU'">
+    <OutputPath>bin\BuildWCF\</OutputPath>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\_Roslyn\nIt.nRoslyn\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asserions\_Assert.cs" />
+    <Compile Include="Collections\ListFrom.cs" />
+    <Compile Include="Collections\Empty.cs" />
+    <Compile Include="Collections\StackList {T}.cs" />
+    <Compile Include="enumarables\ValueWithIndex.cs" />
+    <Compile Include="enumarables\Zip.cs" />
+    <Compile Include="EqualityComparer.cs" />
+    <Compile Include="equality\IEqualityComparerWithReason {T}.cs" />
+    <Compile Include="Errors\NotPreparedForThatCase.cs" />
+    <Compile Include="events\ISubscription.cs" />
+    <Compile Include="events\Subscription.cs" />
+    <Compile Include="events\SubscriptionsHolder.cs" />
+    <Compile Include="ExecutionResult\classes\ActionResult{TErrorInfo}.cs" />
+    <Compile Include="ExecutionResult\classes\SingleItemResult.cs" />
+    <Compile Include="ExecutionResult\classes\FuncResult{TData, TErrorInfo}.cs" />
+    <Compile Include="ExecutionResult\IActionResult{TErrorInfo}.cs" />
+    <Compile Include="ExecutionResult\IFunctResult{TData, TErrorInfo}.cs" />
+    <Compile Include="ExecutionResult\_ReturnOnlyIf.cs" />
+    <Compile Include="Expression\JoinMemberPath.cs" />
+    <Compile Include="Expression\SplitMemberPath.cs" />
+    <Compile Include="ext_Expression.cs" />
+    <Compile Include="ext_IEnumerableOfKeyValuePair.cs" />
+    <Compile Include="ext_INotifyPropertyChanged.cs" />
+    <Compile Include="ext_IQueryable.cs" />
+    <Compile Include="ext_IReadOnlyDictionary.cs" />
+    <Compile Include="ext_IReadOnlyList.cs" />
+    <Compile Include="FSharp\and\And {T1, T2}.cs" />
+    <Compile Include="FSharp\and\IAnd {TA, TB}.cs" />
+    <Compile Include="FSharp\xor-interfaces\ext_XorClasses.cs" />
+    <Compile Include="FSharp\xor-interfaces\InvalidXorVariant.cs" />
+    <Compile Include="FSharp\xor-interfaces\IXor.cs" />
+    <Compile Include="FSharp\xor-interfaces\IXorWithCommon.cs" />
+    <Compile Include="FSharp\xor-interfaces\XorEnum.cs" />
+    <Compile Include="FSharp\Xor2\DifferentTypesEnum.cs" />
+    <Compile Include="FSharp\Xor2\IXor.cs" />
+    <Compile Include="FSharp\Maybe.nonNullable.cs" />
+    <Compile Include="FSharp\Xor2\Xor2.withCommon.cs" />
+    <Compile Include="FSharp\Xor3\Xor3.withCommon.cs" />
+    <Compile Include="FSharp\Xor3\Xor3.s.cs" />
+    <Compile Include="FSharp\Xor2\Xor2.cs" />
+    <Compile Include="FSharp\Xor4\Xor4.cs" />
+    <Compile Include="FSharp\Xor5\Xor5.cs" />
+    <Compile Include="FSharp\Xor6\Xor6.cs" />
+    <Compile Include="FSharp\Xor7\Xor7.cs" />
+    <Compile Include="Function.cs" />
+    <Compile Include="HashCode.cs" />
+    <Compile Include="nExecution\Synch\observable classes\SynchObservableAction.cs" />
+    <Compile Include="nExecution\Synch\observable interfaces\ISynchObservableAction.cs" />
+    <Compile Include="Numbers\Algebra\32\SystemInt32Algebra.cs" />
+    <Compile Include="Numbers\classes\_CreateXor3.cs" />
+    <Compile Include="Numbers\IAnyInt32.cs" />
+    <Compile Include="Numbers\INegativeInt32.cs" />
+    <Compile Include="Numbers\Algebra\32\Int32Algebra.cs" />
+    <Compile Include="Numbers\INonZeroInt32.cs" />
+    <Compile Include="Numbers\IPositiveInt32.cs" />
+    <Compile Include="Numbers\IWithSystemInt32Value.cs" />
+    <Compile Include="Numbers\IZeroInt32.cs" />
+    <Compile Include="Numbers\classes\NegativeInt32.cs" />
+    <Compile Include="Numbers\classes\NegativeOrZeroInt32.cs" />
+    <Compile Include="Numbers\classes\PositiveInt32.cs" />
+    <Compile Include="Numbers\classes\PositiveOrZeroInt32.cs" />
+    <Compile Include="Numbers\classes\ZeroInt32.cs" />
+    <Compile Include="Numbers\_Assert.cs" />
+    <Compile Include="Property\description\chain\ext_IXorWithCommonDescription.cs" />
+    <Compile Include="Property\description\chain\ext_PropertyDescription.cs" />
+    <Compile Include="Property\description\chain\ext_PropertyDescriptionChain.cs" />
+    <Compile Include="Property\description\chain\IPropertyDescriptionChain.cs" />
+    <Compile Include="Property\description\chain\PropertyDescriptionChain.cs" />
+    <Compile Include="Property\description\chain\PropertyDescriptionChain {TOwner}.cs" />
+    <Compile Include="Property\description\chain\PropertyDescriptionChainComparerWithReason.cs" />
+    <Compile Include="Property\description\IWithPathName.cs" />
+    <Compile Include="Property\description\PropertyDescription.cs" />
+    <Compile Include="Property\description\PropertyDescription{TOwner}.cs" />
+    <Compile Include="Property\description\PropertyDescription{TOwner, TAccess, TValueType}.cs" />
+    <Compile Include="Property\description\PropertyDescriptionComparer.cs" />
+    <Compile Include="Property\observable property\IObservableProperty{TValue}.cs" />
+    <Compile Include="Property\observable property\ObservableProperty{TValue}.cs" />
+    <Compile Include="Property\description\IPropertyDescription.cs" />
+    <Compile Include="IObservableObject {TObject}.cs" />
+    <Compile Include="KeyValuePairComparer.cs" />
+    <Compile Include="MergeDictionaries.cs" />
+    <Compile Include="ObjectWithId\ByIdComparer.cs" />
+    <Compile Include="ObjectWithId\ext_IAssertion.cs" />
+    <Compile Include="ObjectWithId\IObjectWithId.cs" />
+    <Compile Include="OwnerOf.cs" />
+    <Compile Include="NameOf.cs" />
+    <Compile Include="nExecution\IExecutionUnit.cs" />
+    <Compile Include="nExecution\Synch\interfaces\ISynchAction.cs" />
+    <Compile Include="nExecution\Synch\interfaces\ISynchAction{TInput}.cs" />
+    <Compile Include="nExecution\Synch\classes\SynchAction{TInput}.cs" />
+    <Compile Include="nExecution\_AbstractExecutionUnit.cs" />
+    <Compile Include="nExecution\Synch\classes\SynchAction.cs" />
+    <Compile Include="ext_AggregateException.cs" />
+    <Compile Include="ext_ObservableCollection.cs" />
+    <Compile Include="ext_Type.cs" />
+    <Compile Include="OxCloneEntity.cs" />
+    <Compile Include="EntityContentComparer.cs" />
+    <Compile Include="EntityContentHelper.cs" />
+    <Compile Include="DateTime.cs" />
+    <Compile Include="ext_GenericEventHandler.cs" />
+    <Compile Include="ext_IDictionary.cs" />
+    <Compile Include="enumarables\ext_IEnumerable.cs" />
+    <Compile Include="ext_Object.cs" />
+    <Compile Include="ext_CollectionChangedEventHandler.cs" />
+    <Compile Include="ext_PropertyChangedEventHandler.cs" />
+    <Compile Include="ext_INotifyDataErrorInfo.cs" />
+    <Compile Include="ext_Queue.cs" />
+    <Compile Include="ext_String.cs" />
+    <Compile Include="ext_TaskCompletionSource.cs" />
+    <Compile Include="Introspector.cs" />
+    <Compile Include="OxCopyContent.cs" />
+    <Compile Include="OxMakeNewEmpty.cs" />
+    <Compile Include="OxUpdateProperty.cs" />
+    <Compile Include="PageInfo\IPageInfo.cs" />
+    <Compile Include="PageInfo\IPage{T}.cs" />
+    <Compile Include="PageInfo\PageInfoDto.cs" />
+    <Compile Include="PageInfo\PageDto{T}.cs" />
+    <Compile Include="Pair{T}.cs" />
+    <Compile Include="Pair{T1, T2}.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property.cs" />
+    <Compile Include="Property\property change\IPropertyChanged {TOwner, TValue}.cs" />
+    <Compile Include="Property\property change\IPropertyChanged.cs" />
+    <Compile Include="Property\property change\IValueChanged {TValue}.cs" />
+    <Compile Include="Property\property change\IValueChanged.cs" />
+    <Compile Include="Property\property change\PropertyChanged {TOwner, TValue, TPropertyAccess}.cs" />
+    <Compile Include="Property\property change\PropertyChanged {TOwner}.cs" />
+    <Compile Include="Property\property change\PropertyChanged {TOwner, TValue}.cs" />
+    <Compile Include="Property\property change\ValueChanged.cs" />
+    <Compile Include="ShouldNotBeHere.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="Throw.cs" />
+    <Compile Include="TimeInterval.cs" />
+    <Compile Include="TypeOf.cs" />
+    <Compile Include="Using.cs" />
+    <Compile Include="ValueOf.cs" />
+    <Compile Include="ItemWithQuantity{}.cs" />
+    <Compile Include="WhenDisposingException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FSharp\Maybe.nullable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Numbers\Algebra\_operations.def3.txt" />
+    <Content Include="Numbers\Algebra\_operations.def2.txt" />
+    <Content Include="Numbers\Algebra\_operations.def1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
